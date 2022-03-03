@@ -13,7 +13,11 @@ To solve this problem, the array must be modified in-place. This means that ther
 
 ##### Technique
 
-Will use the method of two pointers to modify the array in place.
+Will use the method of two pointers to modify the array in place.<br />
+What does it mean? Well, you will use two pointers to point to the opposite sides of the array.
+One will start by pointing to the left most element in the array, and the second will start by pointing to the very most right element in the array. **In other words, one points to the first element and one points to the last element of the array.**
+With each iteration through the array, the left pointer and right pointer increase and decrease, respectivley, until finally they meet/collide in the middle.
+Once they meet in the middle, it means every elemented was visited and the loop can end.
 
 ```java
 public void reverseString(char[] s){
