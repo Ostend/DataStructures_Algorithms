@@ -6,7 +6,7 @@
 > All letters in this word are not capitals, like "leetcode".
 > Only the first letter in this word is capital, like "Google".
 
-## Given a string word, return true if the usage of capitals in it is right.
+> Given a string word, return true if the usage of capitals in it is right.
 
 #### Technique
 
@@ -21,8 +21,8 @@ There are three cases for which our function should return True.
 Automatically, I understand what is False:
 
 1. Any word that has capital letters for the first two letters, followed by lower case letters is False. **ex: LIzardpeople**
-   2.Any word that begins with a lower case letter contains any capital letters, it is False. **ex: lizardPeople**
-2. Any word that has a capital letter followed by a lower case letter contains another capital letters, it is False. **ex: LiZARDPEOplE**
+2. Any word that begins with a lower case letter contains any capital letters, it is False. **ex: lizardPeople**
+3. Any word that has a capital letter followed by a lower case letter contains another capital letters, it is False. **ex: LiZARDPEOplE**
 
 Like an artist using negative space to structure a painting, I will use the False cases to define my function.
 

@@ -9,7 +9,7 @@
 > Input: nums = [3,1,2,4]
 > Output: [2,4,3,1]
 
-## Explanation: The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accepted.
+> Explanation: The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accepted.
 
 #### Technique
 
@@ -25,7 +25,7 @@ Lets take it one step further, what does leetcode want?
 
 There we go, very simple and very clear.
 
-**Whats the catch case?**
+**What’s the catch case?**
 If the array length is 1 or less, go ahead and return it back. It is already, by default, sorted.
 
 **The method**
@@ -50,11 +50,11 @@ Using this logic:
 To implement all of the above together:
 
 1. Left pointer points to the first element in the array.
-2. Right pointer points the the last element in the array.
-3. The value that left pointer is pointing to is tested whether it is even using the modulo opperator.
+2. Right pointer points the last element in the array.
+3. The value that left pointer is pointing to is tested whether it is even using the modulo operator.
    1. If it is even, increase the left pointer by one to visit the next value in the array.
    2. If it is odd: swap the odd value that the pointer is pointing to with the value of the right side of the array that the right pointer is pointing to. **Then decrease the right pointer by one**. As you know for certain that number is odd, you do not need to visit it again and can safely step down to the next array element.
-4. Iterate through the array until all left and right elements have been analyzed. Then return the sorted array.
+4. Iterate through the array until all left and right elements have been analysed. Then return the sorted array.
 
 #### Code
 
@@ -98,7 +98,7 @@ class Solution:
         left+=1
   ```
 
-  **Modulo** opperator in use. This is the meat of the algorithm. To dethermin if the number that the left pointer is pointing to is even or odd. If it is, the pointer increases by one to point to the next element in the array.
+  **Modulo** operator in use. This is the meat of the algorithm. To dethermin if the number that the left pointer is pointing to is even or odd. If it is, the pointer increases by one to point to the next element in the array.
 
 - ```python
     else:

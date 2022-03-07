@@ -8,9 +8,9 @@
 
 ## Given a string word, return true if the usage of capitals in it is right.
 
-#### Techinique
+#### Technique
 
-Okay. Before begenning to code, lets look at the accepted cases versus rejection cases for this problem.
+Okay. Before beginning to code, lets look at the accepted cases versus rejection cases for this problem.
 
 There are three cases for which our function should return True.
 
@@ -21,8 +21,8 @@ There are three cases for which our function should return True.
 Automatically, I understand what is False:
 
 1. Any word that has capital letters for the first two letters, followed by lower case letters is False. **ex: LIzardpeople**
-   2.Any word that begins with a lower case letter contains any capital letters, it is False. **ex: lizardPeople**
-2. Any word that has a capital letter followed by a lower case letter contains another capital letters, it is False. **ex: LiZARDPEOplE**
+2. Any word that begins with a lower case letter contains any capital letters, it is False. **ex: lizardPeople**
+3. Any word that has a capital letter followed by a lower case letter contains another capital letters, it is False. **ex: LiZARDPEOplE**
 
 Like an artist using negative space to structure a painting, I will use the False cases to define my function.
 
@@ -74,16 +74,15 @@ def detectCapitalUse(word: str) -> bool:
   ```
   False statement number 2. If the word begins with a lower case letters but contains an uppercase letter, return False. **ex: queenElizabeth**
   <br />
-- ````python
-      elif(word[0].isupper() and word[1].islower()):
-          for letter in word[2:]:
-              if letter.isupper():
-                  return False
-      ```
-      False statement number 3. IF the word begins with an upper case letter, followed by a lower case letter, but contains yet another upper case letter, return False. **ex: QuEenElizabeth**
-      <br />
-  -`return True`
-      Finally, if none of the above cases returned False, return True. Meaning word satisfies all the true cases. **ex: QueenElizabeth, QUEENELIZABETH, queenelizabeth**
+- ```python
+    elif(word[0].isupper() and word[1].islower()):
+        for letter in word[2:]:
+            if letter.isupper():
+                return False
+  ```
 
+  False statement number 3. IF the word begins with an upper case letter, followed by a lower case letter, but contains yet another upper case letter, return False. **ex: QuEenElizabeth**
+  <br />
 
-  ````
+- `return True`
+  Finally, if none of the above cases returned False, return True. Meaning word satisfies all the true cases. **ex: QueenElizabeth, QUEENELIZABETH, queenelizabeth**
